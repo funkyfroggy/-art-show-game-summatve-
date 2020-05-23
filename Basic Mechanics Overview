@@ -1,0 +1,31 @@
+Let's go over the required mechanics again: 
+--
+1. Use of scene management(1)
+User will interact with a variety of friends in different locations.
+-
+2. Multiple instances of user interaction(1)
+Choose from a variety of options for actions and dialogue.
+
+3. Data collection(scoring) (1)
+your quality of relationship will be visibly measured in "heart ponts".
+
+4. A goal oriented mission (a clear objective for the user) (1)
+Goal is to form healthy friendships with the characters.
+
+5. Object Oriented principles demonstrated (1)
+Points relate to level of success toward the goal.
+
+6. Using a workflow for programming and refactoring the code(khanacademy, p5.js online editor, GitHub pages)(1)
+Github.
+
+7. Hosting your media on GitHub pages (1)
+check.
+
+8. Originality(some feature that is specifically created by you and that you claim is completely your own idea)(1)
+heart points are not typically measured visibly in the visual novel game style.
+
+9. Use of version control(saving multiple versions, this is best done using Github, but multiple versions can be saved using KA or p5.js) (1)
+Github, check.
+
+10. Comments in the code to describe: -What certain portions of the code do -Where certain portions of the code have been taken from (1)
+got it.
