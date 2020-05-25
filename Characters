@@ -1,12 +1,44 @@
 Priya: 
-age: 15
-skin colour: warm tone brown
-eye colour: blue tinted purple
-hair: coarse, curly pink
-personality: bubbly, outgoing, sensitive
 
+age: 15
+-
+skin colour: warm tone brown
+-
+eye colour: blue tinted purple
+-
+hair: coarse, curly pink
+-
+personality: bubbly, outgoing,  
+-
+conflict: prone to being upset by the player. 
+serves as a "learn to be polite" game mode
+---
 Siren:
+
 Age: 17
-skin colour: Blueish pale 
+-
+skin colour: Blueish pale
+-
 hair: long silky teal
+-
 personality: shy, quiet, sassy
+-
+conflict: tends to gossip and insult others. 
+Serves as a "learn to help others with conflicts / teach them manners" game mode
+---
+Tonio:
+
+age: 18
+-
+skin colour: tan, small patterns of vitiligo
+-
+eye colour: yellowish brown
+-
+hair: fluffy brown
+-
+personality: sporty, kind, strong (emotional / physical)
+-
+conflict: mourning the death of his sister. 
+Due to his sporty / jocky status, he struggles with toxic masculinity. 
+Player comforts him, and has to make sure not to overstep boundaries. 
+serves as a "learn to comfort others" game mode
