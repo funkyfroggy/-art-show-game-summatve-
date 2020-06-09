@@ -1,0 +1,30 @@
+function setup() {
+  createCanvas(420, 420);
+
+}
+  let a = 'HOW TO PLAY'
+function draw() {
+  background(270, 180, 180);
+text( a, 150, 5, 100, 100);
+textFont ('Georgia', 35);
+  textAlign (CENTER);
+  textStyle (ITALIC);
+            fill(255,250,250);
+  textSize(20);
+  let b = '(press the corresponding '
+  let c = 'key to your response!)'
+  text(b, 150, 60, 100, 100);
+  text(c, 150, 110, 100, 100);
+  let d = '(Try to make the friends happy!)' 
+  fill(255, 250,250);
+  let e = '(Learn to make good decisions!)'
+  
+    fill(255,250,250);
+   text(d, 150, 190, 100, 100);
+  text(e, 150, 300, 100, 100);
+
+  
+
+  textStyle (ITALIC);
+            fill(255,250,250);
+}
