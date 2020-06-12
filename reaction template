@@ -1,0 +1,27 @@
+var drawScene5 = function() {
+  currentScene = 5;
+  
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(tL, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+  
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+
+ fill(250, 90, 150);
+     rect(180, 300, 200, 90, 20);
+  textSize(20);
+  text("*reaction*", 230, 350);
+    text(" ", 195, 70);
+  // end prompt 
+    }
