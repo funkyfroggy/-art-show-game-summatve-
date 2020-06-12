@@ -1,0 +1,642 @@
+sketch.js
+var currentScene = 8; 
+var canvasW = 400;
+var canvasH = 400;
+let star;
+let tS; 
+let tR;
+let tL; 
+let tD;
+let tB;
+let pH;
+let pL; 
+let pS;
+let pW;
+let sG;
+let sL;
+let sN;
+let sSm;
+let sSu;
+function preload() {
+  star = loadImage('star/3D-Gold-Star-Transparent-Background.png');
+  tS = loadImage('tonio/tonio-suspious.png');
+  tR = loadImage('tonio/tonio-reassured.png');
+  tL = loadImage('tonio/tonio-laugh.png');
+  tD = loadImage('tonio/tonio-depressed.png');
+  tB = loadImage('tonio/tonio-broken.png');
+  pH = loadImage('priya/priya-happy.png');
+  pL = loadImage('priya/priya-laugh.png');
+  pS = loadImage('priya/priya-surprse.png');
+  pW = loadImage('priya/priya-what.png');
+  sG = loadImage('siren/siren-grumpy.png');
+  sL = loadImage('siren/siren-laugh.png');
+ sN = loadImage('siren/siren-neutral.png');
+  sSm = loadImage('siren/siren-smug.png');
+  sSu = loadImage('siren/siren-surprise.png');
+}
+function setup() {
+  createCanvas(canvasW, canvasH);
+  if (currentScene == 1) {
+    drawScene1()
+  }
+else if (currentScene == 2){
+   drawScene2()}
+  else if (currentScene == 3){
+   drawScene3()}
+  
+    else if (currentScene == 4){
+   drawScene4()}
+    
+    else if (currentScene == 5){
+   drawScene5()}
+  
+     else if (currentScene == 6){
+   drawScene6()}
+  
+       else if (currentScene == 7){
+   drawScene7()}
+  
+       else if (currentScene == 8){
+   drawScene8()}
+  }
+
+  
+
+mouseClicked = function() {
+  if (currentScene == 1 && mouseX >= 130 && mouseX <= 340 && mouseY >= 270 && mouseY <= 360) {
+    drawScene2();
+  }
+keyReleased = function(){
+  if(keyCode == '13' && currentScene == 2){
+    drawScene3(); 
+
+ if(keyCode == '32' && currentScene == 3){
+drawScene4();  
+   
+ if(keyCode == '65' && currentScene == 4){
+drawScene5(); 
+   
+    if(keyCode == '66' && currentScene == 4){
+drawScene6(); 
+      
+       if(keyCode == '67' && currentScene == 4){
+drawScene6(); 
+         
+         /// select
+ if(keyCode == '65' && currentScene == 8){
+drawScene9(); 
+   
+    if(keyCode == '66' && currentScene == 8){
+drawScene10(); 
+      
+       if(keyCode == '67' && currentScene == 8){
+drawScene11(); 
+  }
+    }
+ }
+  }
+ }
+ }
+}
+}  
+}
+}
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+</head>
+<body>
+  <script src="scene11.js"> </script>
+  <script src="scene10.js"> </script>
+  <script src="scene9.js"> </script>
+  <script src="scene8.js"> </script>
+  <script src="scene7.js"> </script>
+  <script src="scene6.js"> </script>
+  <script src="scene5.js"> </script>
+  <script src="scene4.js"> </script>
+  <script src="scene3.js"> </script>
+  <script src="scene2.js"> </script>
+  <script src="scene1.js"> </script>
+  <script src="sketch.js"> </script>
+</body>
+</html>
+
+scene1.js
+var drawScene1 = function() {
+  background(260, 180, 200);
+  textFont('Georgia');
+  textStyle(ITALIC);
+  textSize(32);
+  fill(250, 90, 150);
+  textAlign(CENTER, CENTER);
+  text('Problem Solving Academy', 200, 170);
+  textSize(15);
+  text('[Art Show Game Developed by Hannah Rowe]', 200, 220);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  rect(canvasW / 2 - (140 / 2), 270, 140, 90, 10);
+  textSize(30);
+  noStroke();
+  fill(255, 250, 250);
+  text('Play', 200, 315);
+}
+
+scene2.js
+var drawScene2 = function() {
+  currentScene = 2;
+  background(250, 90, 150);
+  textFont('Georgia');
+  textStyle(ITALIC);
+  textSize(32);
+  fill(255, 250, 250);
+  textAlign(CENTER, CENTER);
+  text('HOW TO PLAY', canvasW / 2, 32);
+  textSize(20);
+  text('Press the key that matches your answer!', canvasW / 2, 74);
+  text('Be kind, and try to make the friends happy!', canvasW / 2, 114);
+  text('Learn how to make good choices!', canvasW / 2, 154);
+  text('Press enter to start!', canvasW/2, 320);
+  imageMode(CENTER);
+  image(tL, canvasW/2 - 100, 250, 100, 100);
+  image(pL, canvasW/2, 250, 100, 100);
+  image(sL, canvasW/2 + 100, 250, 100, 100);
+}
+
+scene3.js
+var drawScene3 = function(){
+  currentScene = 3;
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(tL, canvasW/2, canvasH/2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  textAlign(LEFT)
+  fill(250, 90, 150);
+  rect(10, 300, 290, 90, 10);
+  textSize(20);
+  fill(255, 250, 250);
+  textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  text("Hi there! My name is Tonio!", 20, 325);
+  text("Press space to continue!", 20, 350);
+ 
+/*keyPressed = function(){
+  if (keyCode == '32'){
+    background (100);
+  }
+}*/
+} 
+
+scene4.js
+
+var drawScene4 = function() {
+  currentScene = 4;
+ 
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(tL, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+ 
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(190, 10, 200, 90, 20);
+text("Hey, can you ", 220, 45);
+  text("help me study?", 220, 75);
+  // end prompt bubble
+
+ // start bubble 1
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 300, 290, 20, 10);
+  /// end bubble 1
+ 
+  /// start bubble 2
+  rect(10, 330, 290, 20, 10);
+  textSize(20);
+  fill(20, 20, 20);
+/// end bubble 2
+
+  /// start bubble 3
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 360, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 360, 290, 20, 10);
+  /// end bubble 3
+
+  /// start txt 1
+    textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  textSize(16);
+  text("Heh... did you fail another test? (a)", 20, 315);
+  // end txt 1
+ 
+  ///start txt 2
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("I'm a little busy, but I'll find time! (b)", 20, 345);
+  // end txt 2
+ 
+  /// start txt 3
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("Uggggghhhhhhhhh- I mean, sure. (c)", 20, 375);
+  // end txt 3
+  /*keyPressed = function(){
+    if (keyCode == '32'){
+      background (100);
+    }
+  }*/
+}
+
+
+scene5.js
+var drawScene5 = function() {
+  currentScene = 5;
+  
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(tS, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+  
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+
+ fill(250, 90, 150);
+     rect(180, 300, 200, 90, 20);
+  textSize(20);
+  text("H- Hey! I just", 200, 325);
+    text("want an A, okay?", 195, 350);
+  // end prompt 
+    }
+
+scene6.js
+var drawScene6 = function() {
+  currentScene = 6;
+  
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(tR, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+  
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+
+ fill(250, 90, 150);
+     rect(180, 300, 200, 90, 20);
+  textSize(20);
+  text("Thanks! I always", 200, 325);
+    text("know I can count", 195, 350);
+        text("on you! ♡", 200, 375);
+  // end prompt 
+    }
+
+scene7.js
+var drawScene7 = function() {
+  currentScene = 7;
+  
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(tD, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+  
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+
+ fill(250, 90, 150);
+     rect(180, 300, 200, 90, 20);
+  textSize(20);
+  text("wowie, thanks.", 200, 350);
+    text("", 195, 350);
+        text("", 200, 375);
+  // end prompt 
+    }
+    
+    scene8.js
+    var drawScene8 = function() {
+  currentScene = 8;
+  background(250, 90, 150);
+  textFont('Georgia');
+  textStyle(ITALIC);
+  textSize(32);
+  fill(255, 250, 250);
+text('a', 90, 190);
+  text('b', 190, 190);
+  text('c', 290, 190);
+  
+text('Who will you chat with?', 20, 80);
+  imageMode(CENTER);
+  image(tL, canvasW/2 - 100, 250, 100, 100);
+  image(pL, canvasW/2, 250, 100, 100);
+  image(sL, canvasW/2 + 100, 250, 100, 100);
+  
+  
+  image(star,20, 20, 40, 40);
+  image(star, 380, 20, 40, 40);
+  image(star, 380, 380, 40, 40);
+   image(star,20, 380, 40, 40);
+}
+
+scene9.js
+
+var drawScene9 = function() {
+  currentScene = 9;
+ 
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(tL, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+ 
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(190, 10, 200, 90, 20);
+text("Hey, can you ", 220, 45);
+  text("help me study?", 220, 75);
+  // end prompt bubble
+
+ // start bubble 1
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 300, 290, 20, 10);
+  /// end bubble 1
+ 
+  /// start bubble 2
+  rect(10, 330, 290, 20, 10);
+  textSize(20);
+  fill(20, 20, 20);
+/// end bubble 2
+
+  /// start bubble 3
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 360, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 360, 290, 20, 10);
+  /// end bubble 3
+
+  /// start txt 1
+    textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  textSize(16);
+  text("Heh... did you fail another test? (a)", 20, 315);
+  // end txt 1
+ 
+  ///start txt 2
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("I'm a little busy, but I'll find time! (b)", 20, 345);
+  // end txt 2
+ 
+  /// start txt 3
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("Uggggghhhhhhhhh- I mean, sure. (c)", 20, 375);
+  // end txt 3
+  /*keyPressed = function(){
+    if (keyCode == '32'){
+      background (100);
+    }
+  }*/
+}
+
+
+scene10.js
+var drawScene9 = function() {
+  currentScene = 9;
+ 
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(pL, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+ 
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(190, 10, 200, 90, 20);
+text("*prompt text* ", 220, 45);
+  text("", 220, 75);
+  // end prompt bubble
+
+ // start bubble 1
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 300, 290, 20, 10);
+  /// end bubble 1
+ 
+  /// start bubble 2
+  rect(10, 330, 290, 20, 10);
+  textSize(20);
+  fill(20, 20, 20);
+/// end bubble 2
+
+  /// start bubble 3
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 360, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 360, 290, 20, 10);
+  /// end bubble 3
+
+  /// start txt 1
+    textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  textSize(16);
+  text("(a)", 20, 315);
+  // end txt 1
+ 
+  ///start txt 2
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("(b)", 20, 345);
+  // end txt 2
+ 
+  /// start txt 3
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("(c)", 20, 375);
+  // end txt 3
+  /*keyPressed = function(){
+    if (keyCode == '32'){
+      background (100);
+    }
+  }*/
+}
+
+
+scene11.js
+var drawScene9 = function() {
+  currentScene = 9;
+ 
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(sL, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+ 
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(190, 10, 200, 90, 20);
+text("*prompt text* ", 220, 45);
+  text("", 220, 75);
+  // end prompt bubble
+
+ // start bubble 1
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 300, 290, 20, 10);
+  /// end bubble 1
+ 
+  /// start bubble 2
+  rect(10, 330, 290, 20, 10);
+  textSize(20);
+  fill(20, 20, 20);
+/// end bubble 2
+
+  /// start bubble 3
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 360, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 360, 290, 20, 10);
+  /// end bubble 3
+
+  /// start txt 1
+    textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  textSize(16);
+  text("(a)", 20, 315);
+  // end txt 1
+ 
+  ///start txt 2
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("(b)", 20, 345);
+  // end txt 2
+ 
+  /// start txt 3
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("(c)", 20, 375);
+  // end txt 3
+  /*keyPressed = function(){
+    if (keyCode == '32'){
+      background (100);
+    }
+  }*/
+}
+
+
+(style.css is unchanged)
