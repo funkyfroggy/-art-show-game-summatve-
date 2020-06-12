@@ -1,0 +1,77 @@
+var drawScene4 = function() {
+  currentScene = 4;
+  
+  // friendship bar begin
+  friendPointsTonio = 5;
+  rectMode(CORNER);
+  background(90, 190, 120);
+  imageMode(CENTER);
+  image(tL, canvasW / 2.5, canvasH / 2, 400, 400);
+  stroke(255, 250, 250);
+  strokeWeight(3);
+  fill(250, 90, 150, 25.5 * friendPointsTonio);
+  //250, 90, 150
+  rect(10, 10, 150, 10, 10);
+  // friendship bar end
+  
+  //start prompt bubble
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(190, 10, 200, 90, 20);
+text("prompt text", 230, 55);
+  // end prompt bubble
+
+ // start bubble 1
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 300, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 300, 290, 20, 10);
+  /// end bubble 1
+  
+  /// start bubble 2
+  rect(10, 330, 290, 20, 10);
+  textSize(20);
+  fill(20, 20, 20);
+/// end bubble 2
+
+  /// start bubble 3
+  textSize(20);
+  fill(255, 250, 250);
+    rect(10, 360, 290, 20, 10);
+ fill(250, 90, 150);
+     rect(10, 360, 290, 20, 10);
+  /// end bubble 3
+
+  /// start txt 1
+    textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  textSize(16);
+  text("text x", 20, 315);
+  // end txt 1
+  
+  ///start txt 2
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("text y", 20, 345);
+  // end txt 2
+  
+  /// start txt 3
+      textFont('Georgia');
+  textStyle(ITALIC);
+  noStroke();
+  fill(255,250,250);
+  text("text z", 20, 375);
+  // end txt 3
+  /*keyPressed = function(){
+    if (keyCode == '32'){
+      background (100);
+    }
+  }*/
+}
